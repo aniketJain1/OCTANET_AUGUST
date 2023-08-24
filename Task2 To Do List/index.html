@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <style>
+        #optionone {
+
+            background-image: url(./flag-icon/green-flag.png);
+        }
+    </style>
+</head>
+
+
+<body class="bg-success bg-gradient">
+
+    <div class="container border border-secondary my-4 rounded px-4 bg-white" style="min-height: 90vh; width: 65%;">
+
+        <class class="text-center m-2">
+
+            <p style="font-size: 60px; font-weight: bold;"><img src="./flag-icon/note_logo.png" style="height: 100px;"
+                    alt=""> To Do <span style="color: #00cbfe ">List</span> </p>
+        </class>
+
+        <div class="input-group my-2">
+
+            <input type="text" class="form-control rounded-0 me-2" style="width: 30%;" placeholder="Title..."
+                id="title">
+            <span class="input-group-text border-end-0" id="inputGroup-sizing-default">Deadline : </span>
+            <input type="date" class="form-control mr-2 border-start-0" id="deadline" aria-label="" />
+
+
+
+            <button class="btn btn-outline-secondary dropdown-toggle mx-2" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="dropdown_menu">Priority &nbsp;</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onclick="dropdownclick('green')"><img
+                            src="./flag-icon/green-flag.png" alt="3"></a></li>
+                <li><a class="dropdown-item" href="#" onclick="dropdownclick('blue')"><img
+                            src="./flag-icon/blue-flag.png" alt="2"></a></li>
+                <li><a class="dropdown-item" href="#" onclick="dropdownclick('red')"><img src="./flag-icon/red-flag.png"
+                            alt="1"></a></li>
+            </ul>
+
+            <button class="btn rounded-5 addbtn ms-3" style="width: 10%;" type="button" onclick="add()">Add</button>
+
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" style="width: 45%;">Task</th>
+                    <th scope="col">Priority</th>
+                    <th scope="col">Deadline</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="display"></tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
